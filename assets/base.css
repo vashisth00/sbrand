@@ -28,6 +28,13 @@
     font-weight: bold; /* Adjust as necessary for the font-weight */
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Calder Light';
+    src: url('{{ 'Calder-DarkGrit.otf' | asset_url }}') format('opentype');
+    font-weight: bold; /* Adjust as necessary for the font-weight */
+    font-style: normal;
+}
 /* Add more @font-face rules for the other Calder font weights and styles */
 
 /* Montecatini Font Faces */
@@ -53,7 +60,7 @@ h1, h2, h3 {
 
 
 span {
-    font-family: 'BiancoSerif', cursive;
+    font-family: 'BiancoSerif', serif ;
 }
 
 

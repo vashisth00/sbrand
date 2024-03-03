@@ -5,6 +5,58 @@
   --alpha-badge-border: 0.1;
 }
 
+@font-face {
+    font-family: 'BiancoSerif';
+    src: url('{{ 'BiancoSerif-Regular-Trial.otf' | asset_url }}') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BiancoSerif Font Faces */
+@font-face {
+    font-family: 'BiancoSerif';
+    src: url('{{ 'BiancoSerif-Regular-Trial.otf' | asset_url }}') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Add more @font-face rules for the other BiancoSerif font weights and styles */
+
+/* Calder Font Faces */
+@font-face {
+    font-family: 'Calder';
+    src: url('{{ 'Calder-Dark.otf' | asset_url }}') format('opentype');
+    font-weight: bold; /* Adjust as necessary for the font-weight */
+    font-style: normal;
+}
+/* Add more @font-face rules for the other Calder font weights and styles */
+
+/* Montecatini Font Faces */
+@font-face {
+    font-family: 'Montecatini';
+    src: url('{{ 'MontecatiniProTest-Normale.otf' | asset_url }}') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Add more @font-face rules for the other Montecatini font weights and styles */
+
+body {
+    font-family: 'BiancoSerif', sans-serif !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Calder', serif !important;
+}
+
+.custom-class {
+    font-family: 'Montecatini', cursive;
+}
+
+
+span {
+    font-family: 'BiancoSerif', cursive;
+}
+
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);

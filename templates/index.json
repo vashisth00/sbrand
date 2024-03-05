@@ -29,11 +29,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "block_order": ["heading", "text", "button"],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -59,14 +55,11 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "color_scheme": "scheme-1",
         "full_width": true,
@@ -77,7 +70,27 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured feff",
+        "title": "Featured Collections",
+        "heading_size": "h2",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "featured_carota": {
+      "type": "premium-carota-product",
+      "settings": {
+        "title": "Featured Carota",
         "heading_size": "h2",
         "collection": "all",
         "products_to_show": 8,
@@ -117,11 +130,7 @@
           }
         }
       },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
+      "block_order": ["collection-0", "product", "collection-1"],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -152,7 +161,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -161,7 +170,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -170,17 +179,13 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["column1", "column2", "column3"],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -199,12 +204,5 @@
       }
     }
   },
-  "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
-  ]
+  "order": ["image_banner", "rich_text", "featured_collection", "featured_carota", "collage", "video", "multicolumn"]
 }

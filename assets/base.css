@@ -53,6 +53,14 @@ font-family: "BiancoSerif";
 src: url("https://cdn.shopify.com/s/files/1/0859/1081/5007/files/BiancoSerif-Regular-Trial.otf?v=1709506254");
  }
 
+body {
+  background-image: url('https://cdn.shopify.com/s/files/1/0859/1081/5007/files/homepage-desktop-2_1_1.jpg?v=1709680925');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 
 
 body {
@@ -70,7 +78,7 @@ h3 {
 }
 
 span {
-  font-family: 'Calder Dark';
+  font-family: 'Calder-LC';
 }
 
 .product-card-wrapper .card,

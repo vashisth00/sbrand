@@ -815,7 +815,7 @@
         "name": "Featured collection"
       }
     },
-"premium-carota-product": {
+    "premium-carota-product": {
       "name": "Featured Carota",
       "settings": {
         "title": {
@@ -3032,6 +3032,16 @@
       "presets": {
         "name": "Rich text"
       }
+    },
+    "section-dotted-seperator": {
+      "name": "Dotted Seperator",
+      "settings": [],
+      "presets": [
+        {
+          "name": "Dotted Separator",
+          "category": "Text"
+        }
+      ]
     },
     "video": {
       "name": "Video",

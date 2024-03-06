@@ -54,11 +54,11 @@ src: url("https://cdn.shopify.com/s/files/1/0859/1081/5007/files/BiancoSerif-Reg
  }
 
 body {
-  background-image: url('https://cdn.shopify.com/s/files/1/0859/1081/5007/files/homepage-desktop-2_1_1.jpg?v=1709680925');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: url('https://cdn.shopify.com/s/files/1/0859/1081/5007/files/homepage-desktop-2_1_1.jpg?v=1709680925') !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
 }
 
 
@@ -3030,11 +3030,11 @@ details-disclosure > details {
   word-break: break-word;
 }
 
-.gradient {
+/* .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
-}
+} */
 
 @media screen and (forced-colors: active) {
   .icon {

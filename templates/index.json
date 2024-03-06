@@ -35,11 +35,12 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Via_Carota_Craftcocktailhero.png",
         "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",

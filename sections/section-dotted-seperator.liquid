@@ -1,8 +1,37 @@
-
-
 <div class="new-story-gift">
   <div class="new-story-gift__dot"></div>
 </div>
+
+<style>
+.new-story-gift .new-story-gift__dot {
+  position: relative;
+  width: 100%;
+  height: 5px; /* You can adjust this if you need more visible space */
+  margin: 5px 0;
+  background-position: top;
+  background-repeat: repeat-x;
+}
+
+.new-story-gift .new-story-gift__dot:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://drinkviacarota.com/cdn/shop/files/dot_border_brown.svg'); /* Base64 encoded SVG or direct SVG code */
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+@media only screen and (min-width: 990px) {
+  .new-story-gift .new-story-gift__dot {
+    display: block;
+  }
+}
+</style>
+
 {% schema %}
 {
   "name": "Dotted Separator",

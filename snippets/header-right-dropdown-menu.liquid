@@ -7,7 +7,9 @@
 
 <nav class="header__inline-menu vbss">
   <ul class="list-menu list-menu--inline" role="list">
-    {%- for link in section.settings.menu.links limit: 3 -%}
+    {%- assign link_count = section.settings.menu.links.size -%}
+    {%- assign last_two_links = section.settings.menu.links | slice: -2, 2 -%} <!-- Only select the last 2 links -->
+    {%- for link in last_two_links -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>

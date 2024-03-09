@@ -437,6 +437,9 @@
   flex-wrap: wrap;
   gap: 1rem;
   max-width: 45rem;
+  background: #B78942;
+  font-family: 'Calder';
+  color: #ffffff;
   word-break: break-word;
 }
 

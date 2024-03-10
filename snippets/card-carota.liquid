@@ -22,6 +22,30 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var ratingElements = document.querySelectorAll('.product-rating-stars');
+    
+    ratingElements.forEach(function(elem) {
+      var ratingsData = JSON.parse(elem.getAttribute('data-ratings'));
+      var ratingValue = parseFloat(ratingsData.value);
+      var scaleMax = parseFloat(ratingsData.scale_max);
+      var starsHtml = '';
+
+      for (var i = 1; i <= scaleMax; i++) {
+        if (i <= ratingValue) {
+          // Filled Star SVG
+          starsHtml += '<i><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.48326 11.3277C6.80106 11.1359 7.19894 11.1359 7.51674 11.3277L9.915 12.7752C10.6723 13.2323 11.6065 12.5533 11.4056 11.6919L10.7691 8.96361C10.6848 8.60211 10.8076 8.22365 11.0882 7.98059L13.2086 6.14369C13.8772 5.56448 13.5198 4.46622 12.6384 4.39144L9.84887 4.15478C9.47929 4.12343 9.15742 3.89009 9.01268 3.54859L7.92072 0.972174C7.57613 0.159146 6.42387 0.159146 6.07928 0.972174L4.98732 3.54859C4.84258 3.89009 4.52071 4.12343 4.15114 4.15478L1.36163 4.39144C0.480205 4.46622 0.122797 5.56448 0.791395 6.14369L2.9118 7.9806C3.19236 8.22365 3.31521 8.60211 3.23087 8.96361L2.59441 11.6919C2.39345 12.5533 3.32768 13.2323 4.085 12.7752L6.48326 11.3277Z" fill="#654E39"></path> </svg></i>';
+        } else {
+          // Unfilled Star SVG
+          starsHtml += ' <i><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.48326 11.3277C6.80106 11.1359 7.19894 11.1359 7.51674 11.3277L9.915 12.7752C10.6723 13.2323 11.6065 12.5533 11.4056 11.6919L10.7691 8.96361C10.6848 8.60211 10.8076 8.22365 11.0882 7.98059L13.2086 6.14369C13.8772 5.56448 13.5198 4.46622 12.6384 4.39144L9.84887 4.15478C9.47929 4.12343 9.15742 3.89009 9.01268 3.54859L7.92072 0.972174C7.57613 0.159146 6.42387 0.159146 6.07928 0.972174L4.98732 3.54859C4.84258 3.89009 4.52071 4.12343 4.15114 4.15478L1.36163 4.39144C0.480205 4.46622 0.122797 5.56448 0.791395 6.14369L2.9118 7.9806C3.19236 8.22365 3.31521 8.60211 3.23087 8.96361L2.59441 11.6919C2.39345 12.5533 3.32768 13.2323 4.085 12.7752L6.48326 11.3277Z" fill="lightgrey"></path> </svg></i>';
+        }
+      }
+
+      elem.innerHTML = starsHtml;
+    });
+  });
+</script>
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -149,13 +173,24 @@
             <a
               href="{{ card_product.url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
-              class="full-unstyled-link"
+              class="full-unstyled-link carota-section"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
               {{ card_product.title | escape }}
             </a>
           </h3>
+    <!-- Metafield Debug: {{ product.metafields.custom.info_block_options | json }} -->
+
+
           <div class="card-information">
+            {%- if card_product.metafields.custom.ratings -%}
+            <div class="product-rating-stars" data-ratings='{{ card_product.metafields.custom.ratings }}'></div>
+            {%- endif -%}
+            {%- if card_product.metafields.custom.info_block_options -%}
+              <div class="product-info-block-options">
+               {{ card_product.metafields.custom.info_block_options }}
+              </div>
+            {%- endif -%}
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -361,7 +396,7 @@
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="full-unstyled-link">
+            <a role="link" aria-disabled="true" class="full-unstyled-link carota-section">
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>

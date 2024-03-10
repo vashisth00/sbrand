@@ -926,7 +926,16 @@ summary::-webkit-details-marker {
   margin: 0;
   flex-shrink: 0;
   display: flex;
+  font-size: 64px;
+  text-align: center
   align-items: center;
+   font-family: 'MontecatiniProTest-Normale';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 104%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #654e39;
 }
 
 .title-wrapper-with-link .link-with-icon svg {
@@ -944,6 +953,16 @@ summary::-webkit-details-marker {
 
 .title-wrapper--no-top-margin > .title {
   margin-top: 0;
+  font-size: 64px;
+  text-align: center
+  align-items: center;
+   font-family: 'MontecatiniProTest-Normale';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 104%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #654e39;
 }
 
 .subtitle {
@@ -1324,7 +1343,7 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: #654e39;
 }
 
 .button:before,
@@ -3597,4 +3616,15 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+.carota-section {
+   font-family: 'MontecatiniProTest-Normale';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #654e39;
 }

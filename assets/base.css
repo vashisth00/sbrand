@@ -3669,3 +3669,7 @@ details-disclosure > details {
     margin-bottom: 12px;
     color: #654e39;
 }
+
+.white-price {
+ color: #ffffff !important;
+}
